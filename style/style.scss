@@ -1,0 +1,632 @@
+/* Scss Document */
+@import "reset.css";
+
+
+
+body{
+	position: relative;
+	color: white;
+	font-family: fot-cezanne-pron, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	cursor: crosshair;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100vh;
+}
+.none{
+	display: none!important;
+}
+.brend{
+	mix-blend-mode: multiply;
+}
+
+#particles-js{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background : linear-gradient(89.5deg, rgba(131, 74, 244, 1) 0%, rgba(122, 68, 238, 1) 18.52%, rgba(96, 53, 220, 1) 49.21%, rgba(89, 48, 215, 1) 56.74%, rgba(39, 90, 190, 1) 86.52%, rgba(86, 91, 151, 1) 99.44%);
+}
+
+#frontground{
+	position: fixed;
+	top: 0;
+	left: 0;
+	a{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		background-color:#292929;
+		img{
+			display: block;
+			width: 70%;
+		}
+	}
+	h1{
+		width: 50px;
+		background-color:#292929;
+		margin-top: 4px;
+		span{
+			writing-mode: vertical-rl;
+			padding: 1em 0;
+			font-size: calc(50px * 0.6);
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+#fixedBrain{
+	max-width: 300px;
+	height: max-content;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	animation-name: brainBlink;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	img{
+		width: 100%;
+		height: auto;
+	}
+	
+}
+.fixedBrainWait{
+	animation-duration: 2s!important;
+	cursor: pointer;
+}
+.fixedBrainWait:hover{
+	
+}
+
+.fixedBrainCenter{
+	top: 15%!important;
+	bottom: inherit!important;
+}
+
+@keyframes brainBlink {
+	0% {
+		filter: invert(0%);
+	}
+	50%{
+		filter: invert(40%);
+	}
+	100% {
+		filter: invert(0%);
+	}
+}
+
+#msgBox{
+	position: absolute;
+	bottom: 15%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	&,
+	#msgBox-bg,
+	#msgBox-contents{
+		width: calc(60vw + 2em);
+		min-height: calc(10rem + 2rem);
+		position: absolute;
+	}
+	#msgBox-bg{
+		background-color: #7b5f5f;
+	}
+	#msgBox-contents{
+		position: relative;
+		box-sizing: border-box;
+		border: 1em solid rgba(0,0,0,0.00);
+		p{
+			width: 60vw;
+			height: 10rem;
+			padding: 1em 3em;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			border: 2px solid white;
+			box-sizing: border-box;
+			font-size: 2em;
+			line-height: 1.5;
+		}
+		#cursor{
+			display: inline-block;
+			background-color: white;
+			width: 0.6em;
+			height: 1.2em;
+			margin-left: .8em;
+			transform: translateY(0.2em);
+			animation-name: cursorBlink;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes cursorBlink {
+			0% {
+				opacity: 0;
+			}
+			50%{
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+		}
+}
+
+#alertBox{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	&,
+	#alartBox-bg,
+	#alartBox-contents{
+		width: 500px;
+		height: 350px;
+		position: absolute;
+		text-align: center;
+	}
+	#alartBox-bg{
+		overflow: hidden;
+		div{
+			background-color: #292929;
+			width: 100%;
+			height: 100%;
+			&::before,
+			&::after{
+				content: "";
+				display: block;
+				width: 25px;
+				height: 300px;
+				background-color: white;
+				position: absolute;
+				transform: rotate(45deg);
+			}
+			&::before{
+				top: -100px;
+				left: 0;
+			}
+			&::after{
+				bottom: -100px;
+				right: 0;
+			}
+		}
+	}
+	#alartBox-contents{
+		font-size: 2em;
+		#alart-Title,
+		#alart-Msg,
+		#alart-Buttons{
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			display: inline-block;
+			width: max-content;
+		}
+		#alart-Title{
+			top: 15%;
+			border-bottom: 2px solid;
+			padding: 0 1em 0.3em 1em;
+		}
+		#alart-Msg{
+			top: calc(50% - 0.5em);
+		}
+		#alart-Buttons{
+			bottom: 20%;
+			text-align: center;
+			li{
+				display: inline-block;
+				width: 5em;
+				padding: 0.3em 0;
+				border: 1px solid;
+				cursor: pointer;
+				&:first-child{
+					margin-right: .3em;
+				}
+			}
+		}
+		
+		
+	}
+}
+
+#copy{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-align: right;
+	width: 44.5em;
+	line-height: 1.5;
+	font-size: 0.5rem;
+	padding: 1em;
+	color: #9bbbbe;
+	p:last-child{
+		text-align: justify;
+	}
+}
+
+#analyticsBox{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 75%;
+	height: 50%;
+	#analyticsBox-bg,
+	#analyticsBox-contents{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	#analyticsBox-bg{
+		width: 100%;
+		height: 100%;
+		div{
+			background-color: #292929;
+			width: 100%;
+			height: 100%;
+			&::before,
+			&::after{
+				content: "";
+				display: block;
+				width: 25px;
+				height: 300px;
+				background-color: white;
+				position: absolute;
+				transform: rotate(45deg);
+			}
+			&::before{
+				top: -100px;
+				left: 0;
+			}
+			&::after{
+				bottom: -100px;
+				right: 0;
+			}
+		}
+	}
+	#analyticsBox-contents{
+		font-size: 2em;
+		#analytics-Title,
+		#analytics-Msg,
+		#analytics-Buttons{
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			display: inline-block;
+			width: max-content;
+		}
+		#analytics-Title{
+			top: 10%;
+			border-bottom: 2px solid;
+			padding: 0 1em 0.3em 1em;
+		}
+		#analytics-Msg{
+			top: calc(35% - 0.5em);
+		}
+		#analytics-Buttons{
+			bottom: 17%;
+			text-align: center;
+			li{
+				display: inline-block;
+				width: 3.5em;
+				height: 3.5em;
+				border: 1px solid;
+				position: relative;
+				cursor: pointer;
+				&:not(:last-child){
+					margin-right: .3em;
+				}
+				img{
+					width: 70%;
+					height: 70%;
+					margin: auto;
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+#scrollContents{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 80%;
+	width: 1000wv;
+	//この値をJSで変化させていく
+	right: 100vw;
+	#scroll,
+	#contents{
+		display: block;
+		position: absolute;
+	}
+	#scroll{
+		width: 4em;
+		height: auto;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 1000;
+	}
+	ol#contents{
+		left: 4em;
+		width: 1000vw;
+		font-size: 0;
+		li.content{
+			display: inline-block;
+			width: calc(100vw - 20vw);
+			max-width: 1000px;
+			height: 80vh;
+			//ここの値をJSで調整する
+			margin: 0 10vw;
+			font-size: 1rem;
+			position: relative;
+			div.content-left,
+			img.content-right{
+				display: block;
+				height: 100%;
+				font-size: 1rem;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			div.content-left{
+				width: calc(250px);
+				height: max-content;
+				left: 0;
+				
+				h2.rank{
+					font-size: 250px;
+					overflow: hidden;
+				}
+				p.caption{
+					font-size: calc(250px / 15);
+					line-height: 1.5;
+					padding-top: 1em;
+					padding-bottom: 2em;
+					text-align: justify;
+				}
+				
+				ul.actionButtons{
+					display: flex;
+					align-content: space-between;
+					width: 100%;
+					justify-content: space-around;
+					li.actionButton{
+						a{
+							display: block;
+							text-align: center;
+							text-decoration: none;
+							&:hover{
+								background-color: rgba(20,20,20,0.10);
+								border-radius: 10px;
+							}
+							img{
+								width: 100%;
+								height: auto;
+								padding: 0 30%;
+								margin: auto 0;
+								display: block;
+								box-sizing: border-box;
+							}
+							span{
+								color: white;
+								display: block;
+								margin-top: 1em;
+							}
+						}
+					}
+				}
+			}
+			img.content-right{
+				right: 0;
+				width:calc(100% - 250px);
+				height:auto;
+				max-height: 70vh;
+				box-sizing: border-box;
+				padding-left: 50px;
+				display: block;
+			}
+		}
+	}
+}
+
+
+#backBtn,
+#nextBtn{
+	display: block;
+	width: 5vh;
+	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	padding: 50px 2.5vh;
+	border-radius: 10px;
+	&:hover{
+		background-color: rgba(226,226,226,0.50);
+		cursor: pointer;
+	}
+}
+#backBtn{
+	transform: rotate(180deg);
+	left: 0;
+}
+#nextBtn{
+	right: 0;
+}
+
+
+#reportBox{
+	position: absolute;
+	max-width: 800px;
+	height: 90vh;
+	top: 10vh;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 100;
+	mix-blend-mode: screen;
+	header{
+		background-color: rgba(103, 48, 197, 0.68);
+		height: 80px;
+		position: relative;
+		color: #F2F2F2;
+		h2,#closeReport{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			height: 1em;
+			font-family: futura-pt-bold, sans-serif;
+			font-weight: 700;
+			font-style: normal;
+		}
+		h2{
+			font-size: 2em;
+			left: 40px;
+		}
+		#closeReport{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			right: 0;
+			cursor: pointer;
+			height: 80px;
+			width: 80px;
+			span{
+				font-size: 1.5em;
+			}
+			&:hover{
+				background-color: white;
+				color: #0015AD;
+				
+			}
+		}
+	}
+	#report-Content{
+		overflow-y: scroll;
+		height: calc(90vh - 80px);
+		width: 100%;
+		background-color: #F2F2F2;
+		color: black;
+		padding: 40px;
+		box-sizing: border-box;
+		position: relative;
+		div#report-icon-Metas{
+			position: relative;
+			height: 280px;
+			img#report-Thumbnail,
+			div#report-icon-datas{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				height: auto;
+			}
+			img#report-Thumbnail{
+				filter: invert(100%);
+				left: 0;
+				width: 50%;
+				height: auto;
+			}
+			div#report-icon-datas{
+				right: 0;
+				width: 45%;
+				& > *:not(:last-child){
+					padding-bottom: .5rem;
+				}
+				h3{
+					font-family: heisei-kaku-gothic-std, sans-serif;
+					font-weight: 900;
+					font-style: normal;
+					font-size: 2em;
+				}
+				p#report-icon-creator{
+					font-size: 0.8em;
+					img{
+						display: inline-block;
+						width: 1.2em;
+						padding-right: 1em;
+						height: auto;
+						transform: translateY(0.8em * 1.2 / 4);
+					}
+				}
+				p#report-icon-caption{
+					font-size: 1em;
+					line-height: 1.5;
+					text-align: justify;
+				}
+				p#report-icon-how{
+					font-size: 0.8em;
+					line-height: 1.5;
+					text-align: justify;
+				}
+			}
+		}
+		img#report-icon-setlist{
+			width: 100%;
+			height: auto;
+			position: relative;
+			display: block;
+			margin: 2em 0;
+		}
+		div#report-download{
+			width: 100%;
+			text-align: center;
+			img{
+				width: 80px;
+				filter: invert(100%);
+				display:inline-block;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+				display:block;
+				span{
+					display: block;
+					padding: 1em 0;
+				}
+			}
+		}
+	}
+}
+#report-backdrop{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	div{
+		width: 100%;
+		height: 100%;
+		background-color: #292929;
+		mix-blend-mode: multiply;
+	}
+}

@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICON MATCH</title>
+<script>
+	(function(d) {
+		var config = {
+		  kitId: 'rof2shr',
+		  scriptTimeout: 3000,
+		  async: true
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+</script>
+<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+<div id="wrap">
+	<!--効果音-->
+	<audio id="playHover" preload="auto">
+		<source src="sounds/hover.mp3" type="audio/mp3">
+	</audio>
+	<audio id="playClick" preload="auto">
+		<source src="sounds/click.mp3" type="audio/mp3">
+	</audio>
+	<audio id="playType" preload="auto">
+		<source src="sounds/type.mp3" type="audio/mp3">
+	</audio>
+	
+	<!--背景-->
+	<div id="particles-js"></div>
+	
+	<!--前景-->
+	<div id="frontground" class="brend">
+		<a href="index.html"><img src="images/homeIcon.svg" alt="🏠"></a>
+		<h1><span>ICON MACH</span></h1>
+	</div>
+	
+	<!--fixedBrain-->
+	<div id="fixedBrain" class="brend fixedBrainWait">
+		<img src="images/brain.svg" alt="brain">
+	</div>
+	
+	<!--msgBox-->
+	<section id="msgBox" class="none">
+		<div id="msgBox-bg" class="brend">
+			<div><!--背景色を表示--></div>
+		</div>
+		<div id="msgBox-contents">
+			<p><span id="msg1"><!--JSで書き換える--></span><span id="cursor"><!--cursor--></span></p>
+			
+		</div>
+	</section>
+	
+	<!--alertBox-->
+	<section id="alertBox" class="none">
+		<div id="alartBox-bg" class="brend"><div><!--背景色とbeforeなどを指定--></div></div>
+		<div id="alartBox-contents">
+			<h2 id="alart-Title">ALART</h2>
+			<p id="alart-Msg">ブンセキ ヲ カイシ シマスカ？</p>
+			<ul id="alart-Buttons">
+				<li>YES</li>
+				<li>NO</li>
+			</ul>
+		</div>
+	</section>
+	
+	<!--analytics-->
+	<section id="analyticsBox" class="none">
+		<div id="analyticsBox-bg" class="brend"><div><!--背景色とbeforeなどを指定--></div></div>
+		<div id="analyticsBox-contents">
+			<h2 id="analytics-Title">01</h2>
+			<p id="analytics-Msg">スキナ アイコン ハ ドレデスカ？</p>
+			<ul id="analytics-Buttons">
+				<li><img src="images/analyticsIcons/dora-mail.svg" alt="Mail" data-icon-id="dora"></li>
+				<li><img src="images/analyticsIcons/saya-mail.svg" alt="Mail" data-icon-id="saya"></li>
+				<li><img src="images/analyticsIcons/matuba-mail.svg" alt="Mail" data-icon-id="matuba"></li>
+			</ul>
+		</div>
+	</section>
+	
+	<!--Copyright and -->
+	<section id="copy">
+		<p>Copyright © 2018 ICON MATCH All Rights Reserved.</p>
+		<p>このサイトはおすすめのアイコンを紹介するサイトです。アイコンの利用規約は、各アイコン毎に異なります。当サイトからアイコンをダウンロどした時点で、各規約に同意したものとみなします。</p>
+	</section>
+
+	
+	<!--scrollContents.
+	This element overflow brain and msgBox.-->
+	<div id="scrollContents" class="none">		
+		<!--scroll-->
+		<img id="scroll" src="images/scroll.svg" alt="<<<">		
+		<!--reports-->
+		<ol id="contents">
+			<!--A report-->
+			<li class="content">
+				<div class="content-left">
+					<h2 class="rank">01</h2>
+					<p class="caption">マジシャンにまつわる道具やマジックをもとに不思議な雰囲気で制作。サイトにちょっとしたアクセントを加えることができます。</p>
+					<ul class="actionButtons">
+						<li class="actionButton"><a href="#"><img src="images/report.svg" alt="REPORT"><span>REPORT</span></a></li>
+						<li class="actionButton"><a href="#"><img src="images/download.svg" alt="DOWNLOAD"><span>DOWNLOAD</span></a></li>
+					</ul>
+				</div>
+				<img class="content-right" src="images/reportThumbnail/matuba.svg" alt="matuba">
+			</li>
+			
+			<!--A report-->
+			<li class="content">
+				<div class="content-left">
+					<h2 class="rank">02</h2>
+					<p class="caption">マジシャンにまつわる道具やマジックをもとに不思議な雰囲気で制作。サイトにちょっとしたアクセントを加えることができます。</p>
+					<ul class="actionButtons">
+						<li class="actionButton"><a href="#"><img src="images/report.svg" alt="REPORT"><span>REPORT</span></a></li>
+						<li class="actionButton"><a href="#"><img src="images/download.svg" alt="DOWNLOAD"><span>DOWNLOAD</span></a></li>
+					</ul>
+				</div>
+				<img class="content-right" src="images/reportThumbnail/matuba.svg" alt="matuba">
+			</li>
+		</ol>
+	</div>
+	
+	<!--scrollController-->
+	<img src="images/nextback.svg" alt="<" id="backBtn" class="none">
+	<img src="images/nextback.svg" alt="<" id="nextBtn" class="none">
+	
+	
+	<!--REPORT
+	内容はボタンと連動してJSで変更する-->
+	<section id="reportBox" class="none">
+		<header>
+			<h2 id="reportBox-title">REPORT</h2>
+			<div id="closeReport">
+				<span>✕</span>
+			</div>
+		</header>
+		<!--that scroll-->
+		<section id="report-Content">
+			<div id="report-icon-Metas">
+				<img src="images/reportThumbnail/matuba.svg" alt="" id="report-Thumbnail">
+				<div id="report-icon-datas">
+					<h3 id="report-icon-title">マツバアイコン</h3>
+					<p id="report-icon-creator"><img src="images/writer.svg" alt="">松葉</p>
+					<p id="report-icon-caption">マジシャンにまつわる道具やマジックをもとに不思議な雰囲気で制作。サイトにちょっとしたアクセントを加えることができます。</p>
+					<p id="report-icon-how">ゲーム系やファンタジーな雰囲気なサイト。動きが面白いサイトなどにおすすめ。</p>
+				</div>
+			</div>
+			
+			<img src="images/reportIconSetList/matuba.svg" alt="" id="report-icon-setlist">
+			
+			<div id="report-download"><a href="download/icon100-NEON.ai"><img src="images/download.svg" alt="DOWNLOAD"><span>DOWNLOAD</span></a></div>
+		</section>
+	</section>
+	
+	<!--REPORT backdrop-->
+	<div id="report-backdrop" class="brend none"><div><!--background brend--></div></div>
+</div>
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

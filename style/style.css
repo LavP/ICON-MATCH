@@ -1,0 +1,513 @@
+/* Scss Document */
+@import url(reset.css);
+body {
+  position: relative;
+  color: white;
+  font-family: fot-cezanne-pron, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: crosshair;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh; }
+
+.none {
+  display: none !important; }
+
+.brend {
+  mix-blend-mode: multiply; }
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(89.5deg, #834af4 0%, #7a44ee 18.52%, #6035dc 49.21%, #5930d7 56.74%, #275abe 86.52%, #565b97 99.44%); }
+
+#frontground {
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #frontground a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #292929; }
+    #frontground a img {
+      display: block;
+      width: 70%; }
+  #frontground h1 {
+    width: 50px;
+    background-color: #292929;
+    margin-top: 4px; }
+    #frontground h1 span {
+      writing-mode: vertical-rl;
+      padding: 1em 0;
+      font-size: calc(50px * 0.6);
+      display: block;
+      margin: 0 auto; }
+
+#fixedBrain {
+  max-width: 300px;
+  height: max-content;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation-name: brainBlink;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; }
+  #fixedBrain img {
+    width: 100%;
+    height: auto; }
+
+.fixedBrainWait {
+  animation-duration: 2s !important;
+  cursor: pointer; }
+
+.fixedBrainCenter {
+  top: 15% !important;
+  bottom: inherit !important; }
+
+@keyframes brainBlink {
+  0% {
+    filter: invert(0%); }
+  50% {
+    filter: invert(40%); }
+  100% {
+    filter: invert(0%); } }
+#msgBox {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  margin: auto; }
+  #msgBox,
+  #msgBox #msgBox-bg,
+  #msgBox #msgBox-contents {
+    width: calc(60vw + 2em);
+    min-height: calc(10rem + 2rem);
+    position: absolute; }
+  #msgBox #msgBox-bg {
+    background-color: #7b5f5f; }
+  #msgBox #msgBox-contents {
+    position: relative;
+    box-sizing: border-box;
+    border: 1em solid rgba(0, 0, 0, 0); }
+    #msgBox #msgBox-contents p {
+      width: 60vw;
+      height: 10rem;
+      padding: 1em 3em;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border: 2px solid white;
+      box-sizing: border-box;
+      font-size: 2em;
+      line-height: 1.5; }
+    #msgBox #msgBox-contents #cursor {
+      display: inline-block;
+      background-color: white;
+      width: 0.6em;
+      height: 1.2em;
+      margin-left: .8em;
+      transform: translateY(0.2em);
+      animation-name: cursorBlink;
+      animation-duration: 2s;
+      animation-iteration-count: infinite; }
+@keyframes cursorBlink {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+#alertBox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+  #alertBox,
+  #alertBox #alartBox-bg,
+  #alertBox #alartBox-contents {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    text-align: center; }
+  #alertBox #alartBox-bg {
+    overflow: hidden; }
+    #alertBox #alartBox-bg div {
+      background-color: #292929;
+      width: 100%;
+      height: 100%; }
+      #alertBox #alartBox-bg div::before, #alertBox #alartBox-bg div::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 300px;
+        background-color: white;
+        position: absolute;
+        transform: rotate(45deg); }
+      #alertBox #alartBox-bg div::before {
+        top: -100px;
+        left: 0; }
+      #alertBox #alartBox-bg div::after {
+        bottom: -100px;
+        right: 0; }
+  #alertBox #alartBox-contents {
+    font-size: 2em; }
+    #alertBox #alartBox-contents #alart-Title,
+    #alertBox #alartBox-contents #alart-Msg,
+    #alertBox #alartBox-contents #alart-Buttons {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: inline-block;
+      width: max-content; }
+    #alertBox #alartBox-contents #alart-Title {
+      top: 15%;
+      border-bottom: 2px solid;
+      padding: 0 1em 0.3em 1em; }
+    #alertBox #alartBox-contents #alart-Msg {
+      top: calc(50% - 0.5em); }
+    #alertBox #alartBox-contents #alart-Buttons {
+      bottom: 20%;
+      text-align: center; }
+      #alertBox #alartBox-contents #alart-Buttons li {
+        display: inline-block;
+        width: 5em;
+        padding: 0.3em 0;
+        border: 1px solid;
+        cursor: pointer; }
+        #alertBox #alartBox-contents #alart-Buttons li:first-child {
+          margin-right: .3em; }
+
+#copy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  width: 44.5em;
+  line-height: 1.5;
+  font-size: 0.5rem;
+  padding: 1em;
+  color: #9bbbbe; }
+  #copy p:last-child {
+    text-align: justify; }
+
+#analyticsBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 75%;
+  height: 50%; }
+  #analyticsBox #analyticsBox-bg,
+  #analyticsBox #analyticsBox-contents {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+  #analyticsBox #analyticsBox-bg {
+    width: 100%;
+    height: 100%; }
+    #analyticsBox #analyticsBox-bg div {
+      background-color: #292929;
+      width: 100%;
+      height: 100%; }
+      #analyticsBox #analyticsBox-bg div::before, #analyticsBox #analyticsBox-bg div::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 300px;
+        background-color: white;
+        position: absolute;
+        transform: rotate(45deg); }
+      #analyticsBox #analyticsBox-bg div::before {
+        top: -100px;
+        left: 0; }
+      #analyticsBox #analyticsBox-bg div::after {
+        bottom: -100px;
+        right: 0; }
+  #analyticsBox #analyticsBox-contents {
+    font-size: 2em; }
+    #analyticsBox #analyticsBox-contents #analytics-Title,
+    #analyticsBox #analyticsBox-contents #analytics-Msg,
+    #analyticsBox #analyticsBox-contents #analytics-Buttons {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: inline-block;
+      width: max-content; }
+    #analyticsBox #analyticsBox-contents #analytics-Title {
+      top: 10%;
+      border-bottom: 2px solid;
+      padding: 0 1em 0.3em 1em; }
+    #analyticsBox #analyticsBox-contents #analytics-Msg {
+      top: calc(35% - 0.5em); }
+    #analyticsBox #analyticsBox-contents #analytics-Buttons {
+      bottom: 17%;
+      text-align: center; }
+      #analyticsBox #analyticsBox-contents #analytics-Buttons li {
+        display: inline-block;
+        width: 3.5em;
+        height: 3.5em;
+        border: 1px solid;
+        position: relative;
+        cursor: pointer; }
+        #analyticsBox #analyticsBox-contents #analytics-Buttons li:not(:last-child) {
+          margin-right: .3em; }
+        #analyticsBox #analyticsBox-contents #analytics-Buttons li img {
+          width: 70%;
+          height: 70%;
+          margin: auto;
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0; }
+
+#scrollContents {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 80%;
+  width: 1000wv;
+  right: 100vw; }
+  #scrollContents #scroll,
+  #scrollContents #contents {
+    display: block;
+    position: absolute; }
+  #scrollContents #scroll {
+    width: 4em;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000; }
+  #scrollContents ol#contents {
+    left: 4em;
+    width: 1000vw;
+    font-size: 0; }
+    #scrollContents ol#contents li.content {
+      display: inline-block;
+      width: calc(100vw - 20vw);
+      max-width: 1000px;
+      height: 80vh;
+      margin: 0 10vw;
+      font-size: 1rem;
+      position: relative; }
+      #scrollContents ol#contents li.content div.content-left,
+      #scrollContents ol#contents li.content img.content-right {
+        display: block;
+        height: 100%;
+        font-size: 1rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+      #scrollContents ol#contents li.content div.content-left {
+        width: calc(250px);
+        height: max-content;
+        left: 0; }
+        #scrollContents ol#contents li.content div.content-left h2.rank {
+          font-size: 250px;
+          overflow: hidden; }
+        #scrollContents ol#contents li.content div.content-left p.caption {
+          font-size: calc(250px / 15);
+          line-height: 1.5;
+          padding-top: 1em;
+          padding-bottom: 2em;
+          text-align: justify; }
+        #scrollContents ol#contents li.content div.content-left ul.actionButtons {
+          display: flex;
+          align-content: space-between;
+          width: 100%;
+          justify-content: space-around; }
+          #scrollContents ol#contents li.content div.content-left ul.actionButtons li.actionButton a {
+            display: block;
+            text-align: center;
+            text-decoration: none; }
+            #scrollContents ol#contents li.content div.content-left ul.actionButtons li.actionButton a:hover {
+              background-color: rgba(20, 20, 20, 0.1);
+              border-radius: 10px; }
+            #scrollContents ol#contents li.content div.content-left ul.actionButtons li.actionButton a img {
+              width: 100%;
+              height: auto;
+              padding: 0 30%;
+              margin: auto 0;
+              display: block;
+              box-sizing: border-box; }
+            #scrollContents ol#contents li.content div.content-left ul.actionButtons li.actionButton a span {
+              color: white;
+              display: block;
+              margin-top: 1em; }
+      #scrollContents ol#contents li.content img.content-right {
+        right: 0;
+        width: calc(100% - 250px);
+        height: auto;
+        max-height: 70vh;
+        box-sizing: border-box;
+        padding-left: 50px;
+        display: block; }
+
+#backBtn,
+#nextBtn {
+  display: block;
+  width: 5vh;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 50px 2.5vh;
+  border-radius: 10px; }
+  #backBtn:hover,
+  #nextBtn:hover {
+    background-color: rgba(226, 226, 226, 0.5);
+    cursor: pointer; }
+
+#backBtn {
+  transform: rotate(180deg);
+  left: 0; }
+
+#nextBtn {
+  right: 0; }
+
+#reportBox {
+  position: absolute;
+  max-width: 800px;
+  height: 90vh;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+  mix-blend-mode: screen; }
+  #reportBox header {
+    background-color: rgba(103, 48, 197, 0.68);
+    height: 80px;
+    position: relative;
+    color: #F2F2F2; }
+    #reportBox header h2, #reportBox header #closeReport {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 1em;
+      font-family: futura-pt-bold, sans-serif;
+      font-weight: 700;
+      font-style: normal; }
+    #reportBox header h2 {
+      font-size: 2em;
+      left: 40px; }
+    #reportBox header #closeReport {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0;
+      cursor: pointer;
+      height: 80px;
+      width: 80px; }
+      #reportBox header #closeReport span {
+        font-size: 1.5em; }
+      #reportBox header #closeReport:hover {
+        background-color: white;
+        color: #0015AD; }
+  #reportBox #report-Content {
+    overflow-y: scroll;
+    height: calc(90vh - 80px);
+    width: 100%;
+    background-color: #F2F2F2;
+    color: black;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative; }
+    #reportBox #report-Content div#report-icon-Metas {
+      position: relative;
+      height: 280px; }
+      #reportBox #report-Content div#report-icon-Metas img#report-Thumbnail,
+      #reportBox #report-Content div#report-icon-Metas div#report-icon-datas {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: auto; }
+      #reportBox #report-Content div#report-icon-Metas img#report-Thumbnail {
+        filter: invert(100%);
+        left: 0;
+        width: 50%;
+        height: auto; }
+      #reportBox #report-Content div#report-icon-Metas div#report-icon-datas {
+        right: 0;
+        width: 45%; }
+        #reportBox #report-Content div#report-icon-Metas div#report-icon-datas > *:not(:last-child) {
+          padding-bottom: .5rem; }
+        #reportBox #report-Content div#report-icon-Metas div#report-icon-datas h3 {
+          font-family: heisei-kaku-gothic-std, sans-serif;
+          font-weight: 900;
+          font-style: normal;
+          font-size: 2em; }
+        #reportBox #report-Content div#report-icon-Metas div#report-icon-datas p#report-icon-creator {
+          font-size: 0.8em; }
+          #reportBox #report-Content div#report-icon-Metas div#report-icon-datas p#report-icon-creator img {
+            display: inline-block;
+            width: 1.2em;
+            padding-right: 1em;
+            height: auto;
+            transform: translateY(0.24em); }
+        #reportBox #report-Content div#report-icon-Metas div#report-icon-datas p#report-icon-caption {
+          font-size: 1em;
+          line-height: 1.5;
+          text-align: justify; }
+        #reportBox #report-Content div#report-icon-Metas div#report-icon-datas p#report-icon-how {
+          font-size: 0.8em;
+          line-height: 1.5;
+          text-align: justify; }
+    #reportBox #report-Content img#report-icon-setlist {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: block;
+      margin: 2em 0; }
+    #reportBox #report-Content div#report-download {
+      width: 100%;
+      text-align: center; }
+      #reportBox #report-Content div#report-download img {
+        width: 80px;
+        filter: invert(100%);
+        display: inline-block; }
+      #reportBox #report-Content div#report-download a {
+        text-decoration: none;
+        color: black;
+        display: block; }
+        #reportBox #report-Content div#report-download a span {
+          display: block;
+          padding: 1em 0; }
+
+#report-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  #report-backdrop div {
+    width: 100%;
+    height: 100%;
+    background-color: #292929;
+    mix-blend-mode: multiply; }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 569.9 467.3" style="enable-background:new 0 0 569.9 467.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#444444;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<symbol  id="脳" viewBox="-466.5 -382.6 933.1 765.2">
+	<polygon class="st0" points="-323.7,-21.5 -387.7,84.5 -223.7,84.5 	"/>
+	<polygon class="st0" points="-208.7,-62.5 -223.7,84.5 -74.7,10.5 	"/>
+	<polygon class="st0" points="36.3,72.5 -223.7,84.5 -0.7,172.5 	"/>
+	<polygon class="st0" points="69.3,-103.5 36.3,72.5 241.3,122.5 211.3,-1.5 	"/>
+	<polygon class="st0" points="-60.7,-67.5 -74.7,10.5 36.3,72.5 69.3,-103.5 	"/>
+	<polygon class="st0" points="177.3,178.5 36.3,72.5 -2.7,172.5 87.3,226.5 	"/>
+	<polygon class="st0" points="196.3,287.5 283.3,280.5 177.3,178.5 	"/>
+	<polygon class="st0" points="110.3,371.5 186.3,381.5 196.3,287.5 87.3,226.5 	"/>
+	<polygon class="st0" points="-138.7,183.5 -2.7,172.5 -223.7,84.5 	"/>
+	<polygon class="st0" points="-315.7,-181.5 -323.7,-21.5 -208.7,-62.5 	"/>
+	<polygon class="st0" points="-464.7,-77.5 -441.7,0.5 -323.7,-21.5 	"/>
+	<polygon class="st0" points="-426.7,-193.5 -464.7,-77.5 -315.7,-181.5 	"/>
+	<polygon class="st0" points="-280.7,-285.5 -315.7,-181.5 -190.7,-162.5 	"/>
+	<polygon class="st0" points="-138.7,-244.5 -190.7,-162.5 -208.7,-62.5 -60.7,-67.5 	"/>
+	<polygon class="st0" points="-172.7,-353.5 -280.7,-285.5 -134.7,-244.5 	"/>
+	<polygon class="st0" points="-34.7,-167.5 152.3,-259.5 69.3,-103.5 	"/>
+	<polygon class="st0" points="-60.7,-67.5 -34.7,-167.5 -138.7,-244.5 	"/>
+	<polygon class="st0" points="98.3,-380.5 27.3,-268.5 152.3,-259.5 	"/>
+	<polygon class="st0" points="-34.7,-380.5 27.3,-268.5 98.3,-380.5 	"/>
+	<polygon class="st0" points="-134.7,-244.5 27.3,-268.5 -34.7,-380.5 -172.7,-353.5 	"/>
+	<polygon class="st0" points="-34.7,-167.5 27.3,-268.5 152.3,-259.5 	"/>
+	<polygon class="st0" points="-426.7,-193.5 -280.7,-285.5 -315.7,-181.5 	"/>
+	<polygon class="st0" points="219.3,-346.5 98.3,-380.5 152.3,-259.5 	"/>
+	<polygon class="st0" points="267.3,-224.5 177.3,-130.5 327.3,-130.5 	"/>
+	<polygon class="st0" points="327.3,-299.5 267.3,-224.5 152.3,-259.5 219.3,-346.5 	"/>
+	<polygon class="st0" points="69.3,-103.5 177.3,-130.5 152.3,-259.5 	"/>
+	<polygon class="st0" points="327.3,-130.5 211.3,0.5 177.3,-130.5 	"/>
+	<polygon class="st0" points="395.3,-204.5 327.3,-130.5 327.3,-299.5 	"/>
+	<polygon class="st0" points="464.3,-56.5 395.3,-204.5 327.3,-130.5 	"/>
+	<polygon class="st0" points="464.3,31.5 355.3,89.5 331.3,-33.5 	"/>
+	<polygon class="st0" points="211.3,0.5 331.3,-33.5 327.3,-130.5 	"/>
+	<polygon class="st0" points="361.3,204.5 241.3,122.5 355.3,89.5 431.3,127.5 	"/>
+	<polygon class="st0" points="177.3,178.5 241.3,122.5 283.3,280.5 	"/>
+	<polygon class="st0" points="361.3,204.5 283.3,280.5 241.3,122.5 	"/>
+	<polygon class="st0" points="464.3,31.5 431.3,127.5 355.3,89.5 	"/>
+	<polygon class="st0" points="464.3,-56.5 464.3,31.5 331.3,-33.5 327.3,-130.5 	"/>
+	<polygon class="st0" points="-441.7,0.5 -387.7,84.5 -323.7,-21.5 	"/>
+	<polygon class="st0" points="355.3,89.5 211.3,0.5 241.3,122.5 	"/>
+	<line class="st0" x1="211.3" y1="0.5" x2="36.3" y2="72.5"/>
+</symbol>
+<use xlink:href="#脳"  width="933.1" height="765.2" id="XMLID_1_" x="-466.5" y="-382.6" transform="matrix(0.61 0 0 0.61 285.3599 234.2182)" style="overflow:visible;"/>
+</svg>
